@@ -25,4 +25,4 @@ Currently only supports 1 `{giphy}` call per PR.
 Currently uses the [public API key](https://github.com/Giphy/GiphyAPI), which is rate-limited.
 
 ------
-*Powered by Giphy*
+![Powered by Giphy](https://raw.githubusercontent.com/cirla/vim-giphy/master/powered_by_giphy.gif)
