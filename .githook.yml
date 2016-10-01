@@ -1,0 +1,11 @@
+title: GitHook Giphy
+
+description: "Add gifs to your PRs through the power of Giphy."
+
+entry_point: gif.js
+
+triggered_on:
+  - pull_request
+
+scopes_required:
+  - 'repo'
