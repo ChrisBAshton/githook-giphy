@@ -1,5 +1,7 @@
 module.exports = function (data, process) {
-    var PAYLOAD      = data.payload,
+
+    var request      = require('request'),
+        PAYLOAD      = data.payload,
         prWasEdited  = PAYLOAD.action === 'opened' || PAYLOAD.action === 'edited',
         wantsGif     = PAYLOAD.pull_request.body.match(/{giphy "(.+)"}/);
 
@@ -17,7 +19,8 @@ module.exports = function (data, process) {
             var newMarkup;
 
             if (giphyResponse.data) {
-                newMarkup = '![gif auto-fetched by GitHook-Giphy: "' + wantsGif[1] + '"](' + giphyResponse.data.images.downsized_large + ')';
+                newMarkup = '![gif auto-fetched by GitHook-Giphy: "' + wantsGif[1] + '"](' + giphyResponse.data.images.downsized_large.url + ')';
+            }
             else {
                 '![GitHook-Giphy could not find a gif for "' + wantsGif[1] + '". Have a wilting spoon instead.](https://media.giphy.com/media/MYmFHQ3puVjsQ/giphy.gif)';
             }
