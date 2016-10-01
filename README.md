@@ -1,3 +1,5 @@
+[![GitHooks.io](http://githooks.io/validate/ChrisBAshton/githook-giphy/img)](http://githooks.io/githooks/ChrisBAshton/githook-giphy)
+
 # GitHook Giphy
 Automatically add animated gifs to your PRs.
 
