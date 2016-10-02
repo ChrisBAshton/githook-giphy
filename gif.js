@@ -41,12 +41,12 @@ module.exports = function (gh) {
                     gh.process.fail('Could not send POST request: ' + err);
                 }
                 else {
-                    gh.process.succeed('Template POST message successful. Response:' + JSON.stringify(body));
+                    gh.process.succeed('Gif was successfully fetched from Giphy and applied to PR.');
                 }
             });
         });
     }
     else {
-        gh.process.succeed(PAYLOAD.action + ' (payload action) was not "opened", so there was nothing to do here.');
+        gh.process.succeed();
     }
 };
