@@ -4,7 +4,7 @@ module.exports = function (gh) {
         authRequest  = gh.modules.authRequest,
         PAYLOAD      = gh.data.payload,
         prWasEdited  = PAYLOAD.action === 'opened' || PAYLOAD.action === 'edited',
-        wantsGif     = PAYLOAD.pull_request.body.match(/{giphy "(.+)"}/);
+        wantsGif     = PAYLOAD.pull_request.body.match(/{giphy ['"](.+)['"]}/);
 
     if (prWasEdited && wantsGif) {
 
