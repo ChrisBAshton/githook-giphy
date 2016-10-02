@@ -41,7 +41,7 @@ module.exports = function (gh) {
                     gh.process.fail('Could not send POST request: ' + err);
                 }
                 else {
-                    gh.process.succeed('Template POST message successful. Response:' + body);
+                    gh.process.succeed('Template POST message successful. Response:' + JSON.stringify(body));
                 }
             });
         });
